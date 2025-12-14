@@ -1,23 +1,23 @@
 const CACHE_NAME = 'spark-v1';
 const urlsToCache = [
-    '/spark/',
-    '/spark/index.html',
-    '/spark/onboarding.html',
-    '/spark/onboarding1.html',
-    '/spark/signup.html',
-    '/spark/login.html',
-    '/spark/plan.html',
-    '/spark/payment.html',
-    '/spark/match.html',
-    '/spark/chat.html',
-    '/spark/timer.html',
-    '/spark/reveal.html',
-    '/spark/revealed.html',
-    '/spark/exit.html',
-    '/spark/blueocean.jpeg',
-    '/spark/fonts/CabinetGrotesk-Medium.woff2',
-    '/spark/fonts/CabinetGrotesk-Medium.woff',
-    '/spark/fonts/CabinetGrotesk-Medium.ttf'
+    '/Spark/',
+    '/Spark/index.html',
+    '/Spark/onboarding.html',
+    '/Spark/onboarding1.html',
+    '/Spark/signup.html',
+    '/Spark/login.html',
+    '/Spark/plan.html',
+    '/Spark/payment.html',
+    '/Spark/match.html',
+    '/Spark/chat.html',
+    '/Spark/timer.html',
+    '/Spark/reveal.html',
+    '/Spark/revealed.html',
+    '/Spark/exit.html',
+    '/Spark/blueocean.jpeg',
+    '/Spark/fonts/CabinetGrotesk-Medium.woff2',
+    '/Spark/fonts/CabinetGrotesk-Medium.woff',
+    '/Spark/fonts/CabinetGrotesk-Medium.ttf'
 ];
 
 self.addEventListener('install', event => {
