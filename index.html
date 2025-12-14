@@ -3,6 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#000000">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Spark">
+    <link rel="apple-touch-icon" href="blueocean.jpeg">
     <title>Spark</title>
     <style>
         @font-face {
@@ -27,32 +33,38 @@
             box-sizing: border-box;
         }
 
+        html, body {
+            height: 100%;
+            overflow: hidden;
+        }
+
         body {
             font-family: var(--font-heading);
             background-color: var(--color-background);
             color: var(--color-text-primary);
-            min-height: 100dvh;
             -webkit-font-smoothing: antialiased;
         }
 
         .splash-screen {
-            min-height: 100dvh;
+            height: 100dvh;
+            width: 100%;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            gap: 16px;
-            animation: blurFadeIn 0.6s ease-out forwards, blurFadeOut 0.6s ease-in 4.4s forwards;
+            gap: clamp(12px, 3vw, 20px);
+            padding: 16px;
+            animation: blurFadeIn 0.6s ease-out forwards, blurFadeOut 0.6s ease-in 1.4s forwards;
         }
 
         .logo {
-            width: 72px;
-            height: 72px;
+            width: clamp(56px, 15vw, 80px);
+            height: clamp(56px, 15vw, 80px);
             object-fit: contain;
         }
 
         .wordmark {
-            font-size: 32px;
+            font-size: clamp(24px, 7vw, 36px);
             font-weight: 500;
             letter-spacing: -0.02em;
         }
@@ -79,6 +91,11 @@
             }
         }
     </style>
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('sw.js');
+        }
+    </script>
 </head>
 <body>
     <main class="splash-screen">
@@ -89,7 +106,7 @@
     <script>
         setTimeout(() => {
             window.location.href = 'onboarding.html';
-        }, 5000);
+        }, 2000);
     </script>
 </body>
 </html>
